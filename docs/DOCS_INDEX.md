@@ -19,4 +19,3 @@ Start here: `00_PROJECT_SETUP.md`
 - Logs and sign-off: `LOGBOOK.md`, `LOG_CHECKLIST.md`, `SIGNING_OFF.md`
 - System notes: `SYSTEM_NOTES.md`
 - Install: `INSTALL.md`
-- Multi-agent workflow: `MULTI_AGENT_WORKFLOW.md`
