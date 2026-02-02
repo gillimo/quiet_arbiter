@@ -1,14 +1,77 @@
 # quiet_arbiter
-## What It IsStart 2023-10-01 — Early CLI-piped coding assistant prototype. 100% complete; no open issues. Historical artifact that proves early tool-loop design.## How It Works- Start 2023-10-01 — Early CLI-piped coding assistant prototype. 100% complete; no open issues. Historical artifact that proves early tool-loop design.## What It IsStart 2023-10-01 — Original Oct 2023 local agent release. 100% complete; no open issues. Prompt-to-action loop with safe execution as the seed for later stacks.## How It Works- Start 2023-10-01 — Original Oct 2023 local agent release. 100% complete; no open issues. Prompt-to-action loop with safe execution as the seed for later stacks.## What It IsStart 2026-01-20 — Reusable scoring and rating engine. 100% complete; no open issues. Deterministic metrics, calibration flow, and audit-ready outputs.## How It Works- Start 2026-01-20 — Reusable scoring and rating engine. 100% complete; no open issues. Deterministic metrics, calibration flow, and audit-ready outputs.## What It IsStart 2025-12-17 — Full-stack scoring engine with heuristics, caches, CLI/GUI, and evaluation flow. Multi‑signal weighting, role balancing, and draft optimization with explainable outputs. Designed to stress-test ranking logic, iteration velocity, and production‑grade scoring pipelines.## How It Works- Start 2025-12-17 — Full-stack scoring engine with heuristics, caches, CLI/GUI, and evaluation flow. Multi‑signal weighting, role balancing, and draft optimization with explainable outputs. Designed to stress-test ranking logic, iteration velocity, and production‑grade scoring pipelines.## What It IsStart 2023-09-29 — Foundational local automation agent with prompt-to-action loops. 100% complete; no open issues. Compact architecture with command extraction, safety gates, and retry flow.## How It Works- Start 2023-09-29 — Foundational local automation agent with prompt-to-action loops. 100% complete; no open issues. Compact architecture with command extraction, safety gates, and retry flow.## What It IsStart 2026-01-12 — Reusable agent/data template. 100% complete; no open issues. Standardized CLI/GUI, config, docs, and validation scaffolding.## How It Works- Start 2026-01-12 — Reusable agent/data template. 100% complete; no open issues. Standardized CLI/GUI, config, docs, and validation scaffolding.## What It IsBuild a Rust-first, low-latency Polymarket arbitrage engine where latency is the first gate. The system hunts long-tail mispricings, executes two-leg trades with strict risk controls, and proves positive EV through auditable logs and iteration. No LLMs in the hot path.## How It Works- See README sections below for details on components and flow.
 
-Build a Rust-first, low-latency Polymarket arbitrage engine where latency is the first gate. The system hunts long-tail mispricings, executes two-leg trades with strict risk controls, and proves positive EV through auditable logs and iteration. No LLMs in the hot path.
+Mission Learning Statement
+- Mission: Build a Rust-first, low-latency Polymarket arbitrage engine with strict risk controls.
+- Learning focus: latency budgeting, execution routing, and audit-grade logging.
+- Project start date: 2026-02-02 (inferred from initial scaffold)
 
-Quickstart:
-- Build: `cargo build --manifest-path core/Cargo.toml`
-- Status: `cargo run --manifest-path core/Cargo.toml -- status`
-- Run replay: `cargo run --manifest-path core/Cargo.toml -- run --ticks data/market_ticks.jsonl`
+Rust-first, low-latency arbitrage engine that hunts long-tail mispricings with two-leg execution and conservative exposure.
 
-Notes:
-- The Rust core is the source of truth for execution and risk.
-- It prints to CLI now; later it will run as a background process with the same log outputs.
-- Use `docs/DOCS_INDEX.md` to follow the operating order.
+## Features
+
+- Latency budgets enforced as a hard gate
+- Replay harness with JSONL market ticks
+- Risk limits and edge thresholds in state config
+- Deterministic logs for audit and replay
+
+## Installation
+
+### Requirements
+
+- Rust toolchain (stable)
+
+## Quick Start
+
+```bash
+cargo build --manifest-path core/Cargo.toml
+cargo run --manifest-path core/Cargo.toml -- status
+cargo run --manifest-path core/Cargo.toml -- run --ticks data/market_ticks.jsonl
+```
+
+## Usage
+
+- `status` prints current latency budgets and thresholds.
+- `run` replays market ticks and logs decisions to `logs/run_*.jsonl`.
+
+## Architecture
+
+```
+Market Ticks (JSONL)
+    |
+    v
+Ingest + Normalize
+    |
+    v
+Latency Gate + Edge Check
+    |
+    v
+Decision + Risk Check
+    |
+    v
+Log Output (JSONL)
+```
+
+## Project Structure
+
+```
+core/               # Rust core
+  src/main.rs       # CLI and replay
+  Cargo.toml
+
+data/               # State + replay inputs
+logs/               # Run logs (generated)
+```
+
+## Building
+
+```bash
+cargo build --manifest-path core/Cargo.toml
+```
+
+## Contributing
+
+Open tickets live in `docs/TICKETS.md`.
+
+## License
+
+MIT License - see [LICENSE](LICENSE) for details.
