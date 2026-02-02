@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "quiet_arbiter State",
+  "type": "object",
+  "required": ["version", "system", "risk_limits", "strategies", "markets", "positions", "orders", "pnl"],
+  "properties": {
+    "version": {"type": "integer"},
+    "system": {
+      "type": "object",
+      "required": ["name", "mode", "venue", "latency_budget_ms"],
+      "properties": {
+        "name": {"type": "string"},
+        "mode": {"type": "string"},
+        "venue": {"type": "string"},
+        "latency_budget_ms": {
+          "type": "object",
+          "required": ["market_data_max_age", "decision_max", "order_submit_max", "end_to_end_max"],
+          "properties": {
+            "market_data_max_age": {"type": "number"},
+            "decision_max": {"type": "number"},
+            "order_submit_max": {"type": "number"},
+            "end_to_end_max": {"type": "number"}
+          }
+        }
+      }
+    },
+    "risk_limits": {
+      "type": "object",
+      "required": ["max_gross_exposure", "max_net_exposure", "max_order_size", "max_daily_loss", "min_edge_bps"],
+      "properties": {
+        "max_gross_exposure": {"type": "number"},
+        "max_net_exposure": {"type": "number"},
+        "max_order_size": {"type": "number"},
+        "max_daily_loss": {"type": "number"},
+        "min_edge_bps": {"type": "number"}
+      }
+    },
+    "strategies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "enabled"],
+        "properties": {
+          "name": {"type": "string"},
+          "enabled": {"type": "boolean"},
+          "notes": {"type": "string"}
+        }
+      }
+    },
+    "markets": {"type": "array"},
+    "positions": {"type": "array"},
+    "orders": {"type": "array"},
+    "pnl": {
+      "type": "object",
+      "required": ["realized", "unrealized"],
+      "properties": {
+        "realized": {"type": "number"},
+        "unrealized": {"type": "number"}
+      }
+    },
+    "notes": {
+      "type": "object",
+      "properties": {
+        "short": {"type": "array", "items": {"type": "string"}},
+        "mid": {"type": "array", "items": {"type": "string"}},
+        "long": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

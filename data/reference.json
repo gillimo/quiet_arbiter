@@ -1,0 +1,23 @@
+{
+  "dependencies": [
+    "polymarket market data access",
+    "polymarket fee schedule",
+    "execution credentials (not stored in repo)",
+    "latency budget targets"
+  ],
+  "methods": [
+    "two_leg_arb",
+    "mispricing_scan"
+  ],
+  "benchmarks": [
+    "edge_bps",
+    "fill_rate",
+    "slippage"
+  ],
+  "glossary": [
+    "edge",
+    "ev",
+    "slippage",
+    "kill_switch"
+  ]
+}

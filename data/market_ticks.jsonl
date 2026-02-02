@@ -1,0 +1,10 @@
+{"market_id":"NYC_MAYOR_2026","ts_exchange_ms":1738531200000,"ts_recv_ms":1738531200060,"bid":0.46,"ask":0.48}
+{"market_id":"NYC_MAYOR_2026","ts_exchange_ms":1738531200100,"ts_recv_ms":1738531200180,"bid":0.46,"ask":0.49}
+{"market_id":"US_GDP_Q2_2026","ts_exchange_ms":1738531200200,"ts_recv_ms":1738531200310,"bid":0.52,"ask":0.54}
+{"market_id":"US_GDP_Q2_2026","ts_exchange_ms":1738531200300,"ts_recv_ms":1738531200335,"bid":0.52,"ask":0.53}
+{"market_id":"BTC_100K_2026","ts_exchange_ms":1738531200400,"ts_recv_ms":1738531200415,"bid":0.18,"ask":0.20}
+{"market_id":"BTC_100K_2026","ts_exchange_ms":1738531200500,"ts_recv_ms":1738531200605,"bid":0.19,"ask":0.21}
+{"market_id":"FED_CUT_JUN_2026","ts_exchange_ms":1738531200600,"ts_recv_ms":1738531200680,"bid":0.61,"ask":0.62}
+{"market_id":"FED_CUT_JUN_2026","ts_exchange_ms":1738531200700,"ts_recv_ms":1738531200712,"bid":0.60,"ask":0.62}
+{"market_id":"NBA_CHAMP_2026","ts_exchange_ms":1738531200800,"ts_recv_ms":1738531200865,"bid":0.08,"ask":0.10}
+{"market_id":"NBA_CHAMP_2026","ts_exchange_ms":1738531200900,"ts_recv_ms":1738531200910,"bid":0.08,"ask":0.09}

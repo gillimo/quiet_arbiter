@@ -1,0 +1,5 @@
+{
+  "edge": {"weight": 0.5},
+  "fill_quality": {"slippage_weight": 0.3, "latency_weight": 0.2},
+  "risk": {"exposure_weight": 0.6, "drawdown_weight": 0.4}
+}

@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "system": {
+    "name": "quiet_arbiter",
+    "mode": "paper",
+    "venue": "polymarket",
+    "latency_budget_ms": {
+      "market_data_max_age": 100,
+      "decision_max": 5,
+      "order_submit_max": 25,
+      "end_to_end_max": 200
+    }
+  },
+  "risk_limits": {
+    "max_gross_exposure": 0,
+    "max_net_exposure": 0,
+    "max_order_size": 0,
+    "max_daily_loss": 0,
+    "min_edge_bps": 0
+  },
+  "strategies": [
+    {
+      "name": "two_leg_arb",
+      "enabled": false,
+      "notes": ""
+    }
+  ],
+  "markets": [],
+  "positions": [],
+  "orders": [],
+  "pnl": {
+    "realized": 0,
+    "unrealized": 0
+  },
+  "notes": {
+    "short": ["define first milestone"],
+    "mid": [],
+    "long": []
+  }
+}
