@@ -3,9 +3,8 @@
 /build/
 *.spec
 
-# Python
-__pycache__/
-*.pyc
+# Rust
+core/target/
 
 # Logs
 /logs/
